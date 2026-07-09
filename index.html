@@ -209,7 +209,8 @@
   .modal-close:hover{border-color:var(--accent); color:var(--accent);}
   .modal-top{display:grid; grid-template-columns:.9fr 1.1fr; gap:0;}
   .modal-media{background:var(--panel-2); display:flex; align-items:center; justify-content:center; padding:30px; border-right:1px solid var(--line);}
-  .modal-media img{max-width:100%; border-radius:8px; display:block;}
+  .modal-media img{max-width:100%; max-height:70vh; width:auto; height:auto; object-fit:contain; border-radius:8px; display:block;}
+  .modal-media.is-mobile img{max-height:64vh;}
   .modal-info{padding:36px 34px;}
   .modal-info .tag{font-family:var(--mono); font-size:11px; color:var(--accent); letter-spacing:.1em; text-transform:uppercase;}
   .modal-info h2{font-size:26px; margin:12px 0 12px;}
@@ -361,7 +362,7 @@
         <div class="proj-card" data-cat="mobile">
           <div class="proj-media"><span class="hz hz-critical">FIELD APP</span><span class="icon">📍</span></div>
           <div class="proj-body">
-            <h3>BiondEOC</h3>
+            <h3>Biond EOC</h3>
             <p>Mobile emergency-operations app for field responders — live incident reporting, map-based unit tracking, and real-time alerts, built for iOS and Android.</p>
             <div class="proj-meta">
               <span class="proj-stack">Flutter · Mapbox · REST API</span>
@@ -682,7 +683,7 @@
       desc: 'BiondEOC is an emergency-management and community-safety app used to keep residents informed and connect them to help — from typhoon and flood advisories to a direct emergency hotline.',
       role: 'Full-Stack Developer',
       roleText: 'One of two developers on the Biond, Inc. team building BiondEOC. Worked across the Flutter app and the C# / .NET Core REST API — building features, integrating third-party services (Agora, Twilio, Firebase Cloud Messaging), and handling cross-platform releases for iOS and Android.',
-      stack: ['Flutter','Dart','C# / .NET Core (REST API)','Agora','Twilio','Firebase Cloud Messaging'],
+      stack: ['Flutter','Dart','C# / .NET Core (REST API)','Agora','Twilio','Firebase Cloud Messaging','Mapbox','Google Maps','OpenWeather Api','OpenAI'],
       img: 'biondeoc-card.png',
       about: 'BiondEOC delivers real-time hazard advisories (typhoon season updates, local fire and flood alerts) alongside a one-tap emergency reporting flow and a direct call-to-hotline button, so users can act immediately during a crisis rather than searching for the right number.'
     },
@@ -695,8 +696,8 @@
       desc: 'A regional deployment of the EOC field app, adapted for Lanao del Sur\'s emergency response workflows.',
       role: 'Full-Stack Developer',
       roleText: 'Contributed to adapting the shared EOC Flutter codebase for a new regional deployment — configuring hazard data sources and map overlays for the local area.',
-      stack: ['Flutter','Mapbox','Firebase'],
-      img: null,
+      stack: ['Flutter','Dart','C# / .NET Core (REST API)','Agora','Twilio','Firebase Cloud Messaging','Mapbox','Google Maps','OpenWeather Api','OpenAI'],
+      img: 'lanao.png',
       about: 'Same core platform as BiondEOC, configured for Lanao del Sur: local hazard layers, regional contact routing, and incident tracking suited to that province\'s response teams.'
     },
     tungawaneoc: {
@@ -708,8 +709,8 @@
       desc: 'A regional deployment of the EOC field app, adapted for Tungawan, Zamboanga Sibugay\'s emergency response workflows.',
       role: 'Full-Stack Developer',
       roleText: 'Contributed to adapting the shared EOC Flutter codebase for a new regional deployment — configuring hazard data sources and map overlays for the local area.',
-      stack: ['Flutter','Mapbox','Firebase'],
-      img: null,
+      stack: ['Flutter','Dart','C# / .NET Core (REST API)','Agora','Twilio','Firebase Cloud Messaging','Mapbox','Google Maps API','OpenWeather API','OpenAI'],
+      img: 'tungawan.png',
       about: 'Same core platform as BiondEOC, configured for Tungawan: local hazard layers, regional contact routing, and incident tracking suited to that LGU\'s response team.'
     },
     biondmgmt: {
@@ -720,7 +721,7 @@
       desc: 'The admin back-office for the BiondEOC platform — where response teams manage incidents, users, and reports.',
       role: 'Full-Stack Developer',
       roleText: 'Built and maintained parts of the management dashboard and its underlying C# / .NET Core API, including data models in MSSQL via EF Code-First.',
-      stack: ['.NET Core','EF Code-First','LINQ','MSSQL'],
+      stack: ['Flutter','Dart','.NET Core API','EF Code-First','LINQ','MSSQL','Agora','Twilio','Google Maps API'],
       img: null,
       about: 'A web console for administrators to review incident reports coming in from the mobile app, manage response-team accounts, and generate summary reports.'
     },
@@ -732,7 +733,7 @@
       desc: 'Management portal for the Lanao del Sur EOC deployment.',
       role: 'Full-Stack Developer',
       roleText: 'Extended the shared management-console codebase for Lanao del Sur\'s administrators and user-access requirements.',
-      stack: ['.NET Core','MSSQL','REST API'],
+      stack: ['Flutter','Dart','.NET Core API','EF Code-First','LINQ','MSSQL','Agora','Twilio','Google Maps API'],
       img: null,
       about: 'Configuration, user access, and incident oversight for Lanao del Sur\'s local EOC administrators, built on the same management platform as BiondEOC.'
     },
@@ -744,7 +745,7 @@
       desc: 'Management portal for the Tungawan, Zamboanga Sibugay EOC deployment.',
       role: 'Full-Stack Developer',
       roleText: 'Configured the shared management-console platform for Tungawan\'s local government unit and response team.',
-      stack: ['.NET Core','MSSQL','REST API'],
+      stack: ['Flutter','Dart','.NET Core API','EF Code-First','LINQ','MSSQL','Agora','Twilio','Google Maps API'],
       img: null,
       about: 'Same management platform as BiondEOC and Lanao EOC Management, deployed and configured for Tungawan\'s LGU response team.'
     },
@@ -756,7 +757,7 @@
       role: 'Developer',
       roleText: 'Built end-to-end as a capstone thesis project — Flutter app, Firebase backend, and embedded firmware for the machine controller.',
       stack: ['Flutter','Firebase Realtime DB','Firebase Auth','ESP32-C6','Arduino IDE'],
-      img: null,
+      img: 'cohaco.jpg',
       links: [
         { label: 'Flutter App', url: 'https://github.com/leonlau4148/cohaco', icon: '📱' },
         { label: 'ESP32 Firmware', url: 'https://github.com/leonlau4148/cohacofrimware', icon: '⚙️' },
@@ -773,7 +774,7 @@
       role: 'IT Support',
       roleText: 'Developed and maintained the site during a role as IT Support at ECOMM — built the layout in Elementor on the Astra theme, alongside general WordPress upkeep and technical documentation.',
       stack: ['WordPress','Astra','Elementor'],
-      img: null,
+      img: 'ecomm.png',
       about: 'A marketing and information site for ECOMM\'s virtual assistance services, covering the company\'s offerings and contact channels for prospective clients.'
     },
     ravenapi: {
@@ -783,8 +784,8 @@
       desc: 'A personal C# / .NET Core REST API sample, with interactive Swagger documentation for every endpoint.',
       role: 'Developer',
       roleText: 'Built independently as a reference sample of REST API design, request/response contracts, and Swagger/OpenAPI documentation conventions in ASP.NET Core.',
-      stack: ['C#','.NET Core','REST API','Swagger / OpenAPI'],
-      img: null,
+      stack: ['C#','.NET Core','REST API','Swagger / OpenAPI','JWT','OAuth'],
+      img: 'ravenapi.png',
       links: [
         { label: 'Visit Swagger Docs', url: 'https://ravenapi-proxy.ravenpauladrales.workers.dev/swagger/index.html', icon: '🔗' },
         { label: 'Visit GitHub', url: 'https://github.com/leonlau4148/ravenapi', icon: '💻' }
@@ -800,7 +801,7 @@
       role: 'Developer',
       roleText: 'Built independently as a Flutter sample project, deployed as a web build to demonstrate UI, state management, and layout responsiveness outside of a client project.',
       stack: ['Flutter','Dart'],
-      img: null,
+      img: 'finance.png',
       about: 'A lightweight personal-finance tracker built to show off Flutter fundamentals — forms, list views, and state-driven UI — running directly in the browser via a Flutter web build.'
     },
     apex: {
@@ -812,7 +813,7 @@
       role: 'Developer',
       roleText: 'Built independently as a front-end practice project, hosted on GitHub Pages.',
       stack: ['HTML','CSS','JavaScript'],
-      img: null,
+      img: 'apex.png',
       about: 'A self-directed website build used to explore visual design and front-end structure outside of client work.'
     },
     nova: {
@@ -824,7 +825,7 @@
       role: 'Developer',
       roleText: 'Built independently as a front-end practice project, hosted on GitHub Pages.',
       stack: ['HTML','CSS','JavaScript'],
-      img: null,
+      img: 'nova.png',
       about: 'A self-directed website build used to explore visual design and front-end structure outside of client work.'
     },
     quantumchain: {
@@ -836,7 +837,7 @@
       role: 'Developer',
       roleText: 'Built independently as a front-end practice project, hosted on GitHub Pages.',
       stack: ['HTML','CSS','JavaScript'],
-      img: null,
+      img: 'quantumchain.png',
       about: 'A self-directed website build used to explore visual design and front-end structure outside of client work.'
     }
   };
@@ -849,7 +850,7 @@
     if(!p) return;
     modalContent.innerHTML = `
       <div class="modal-top">
-        <div class="modal-media">
+        <div class="modal-media${p.platform === 'mobile' ? ' is-mobile' : ''}">
           ${p.img ? `<img src="${p.img}" alt="${p.title} screenshot">` : `<div style="color:var(--muted); font-family:var(--mono); font-size:13px; text-align:center;">Screenshot coming soon</div>`}
         </div>
         <div class="modal-info">
