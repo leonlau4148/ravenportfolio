@@ -480,6 +480,18 @@
         </div>
 
         <div class="proj-card" data-cat="demo">
+          <div class="proj-media"><span class="hz hz-research">FULL-STACK SAMPLE</span><span class="icon">🦅</span></div>
+          <div class="proj-body">
+            <h3>Raven Finance (MERN)</h3>
+            <p>A full-stack MERN rebuild of my finance tracker — JWT auth, ownership-scoped CRUD, and a live balance dashboard, deployed across Atlas, Render, and GitHub Pages.</p>
+            <div class="proj-meta">
+              <span class="proj-stack">MongoDB · Express · React · Node</span>
+              <button class="proj-cta" data-proj="ravenmern">View details →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card" data-cat="demo">
           <div class="proj-media"><span class="hz hz-research">WEBSITE SAMPLE</span><span class="icon">🅰️</span></div>
           <div class="proj-body">
             <h3>Apex</h3>
@@ -571,7 +583,7 @@
         <div class="skill-card">
           <h4>Frontend & Mobile</h4>
           <div class="chip-row">
-            <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Tailwind CSS</span>
+            <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">React</span><span class="chip">Vite</span><span class="chip">TypeScript</span><span class="chip">Tailwind CSS</span>
           </div>
         </div>
         <div class="skill-card">
@@ -583,7 +595,7 @@
         <div class="skill-card">
           <h4>Data & Cloud</h4>
           <div class="chip-row">
-            <span class="chip">MSSQL</span><span class="chip">Firebase</span><span class="chip">MongoDB</span><span class="chip">Supabase</span><span class="chip">Azure</span>
+            <span class="chip">MSSQL</span><span class="chip">MongoDB</span><span class="chip">Mongoose</span><span class="chip">Firebase</span><span class="chip">Supabase</span><span class="chip">Azure</span><span class="chip">Render</span>
           </div>
         </div>
         <div class="skill-card">
@@ -595,7 +607,7 @@
         <div class="skill-card">
           <h4>Tools</h4>
           <div class="chip-row">
-            <span class="chip">Git / GitHub</span><span class="chip">GitHub Actions</span><span class="chip">Postman</span><span class="chip">Jira</span><span class="chip">Figma</span>
+            <span class="chip">Git / GitHub</span><span class="chip">GitHub Actions</span><span class="chip">REST APIs</span><span class="chip">JWT</span><span class="chip">Postman</span><span class="chip">Jira</span><span class="chip">Figma</span>
           </div>
         </div>
         <div class="skill-card">
@@ -803,6 +815,22 @@
       stack: ['Flutter','Dart'],
       img: 'finance.png',
       about: 'A lightweight personal-finance tracker built to show off Flutter fundamentals — forms, list views, and state-driven UI — running directly in the browser via a Flutter web build.'
+    },
+    ravenmern: {
+      tag: 'Full-Stack Sample',
+      platform: 'web',
+      title: 'Raven Finance (MERN)',
+      desc: 'A ground-up MERN rebuild of my finance tracker — user accounts, income/expense transactions, and a live balance dashboard, originally built in Flutter + ASP.NET Core.',
+      role: 'Developer',
+      roleText: 'Built independently as a deliberate exercise in transferring engineering fundamentals across ecosystems. The entire backend — JWT auth, middleware, ownership-scoped CRUD, and cloud database — came together in a single focused session, because every concept mapped directly to something I had already built in .NET.',
+      stack: ['MongoDB Atlas','Express','React (Vite)','Node.js','JWT','bcrypt','Mongoose','axios','GitHub Pages','Render'],
+      img: 'financemern.png',
+      links: [
+        { label: 'Live App', url: 'https://leonlau4148.github.io/raven-mern/', icon: '🔗' },
+        { label: 'API Health', url: 'https://raven-mern.onrender.com/api/health', icon: '⚡' },
+        { label: 'Visit GitHub', url: 'https://github.com/leonlau4148/raven-mern', icon: '💻' }
+      ],
+      about: 'JWT authentication with bcrypt-hashed passwords, ownership-scoped CRUD where every query filters by the authenticated user\'s ID, and a running-balance dashboard derived from transaction state. Auth lives in a React Context provider with guarded routes and a configured axios instance for token injection; sessions persist via localStorage. Security details: userId always comes from the verified token (never the request body), update/delete queries filter on both _id and userId, and login returns identical errors to avoid account enumeration.'
     },
     apex: {
       tag: 'Website Sample',
