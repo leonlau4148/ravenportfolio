@@ -492,6 +492,18 @@
         </div>
 
         <div class="proj-card" data-cat="demo">
+          <div class="proj-media"><span class="hz hz-research">FULL-STACK SAMPLE</span><span class="icon">🔷</span></div>
+          <div class="proj-body">
+            <h3>Raven Finance (MERN + TypeScript)</h3>
+            <p>A typed end-to-end rewrite of the MERN finance tracker — React 19, Express 5, and Tailwind v4, with Mongoose schemas as the single source of truth for types.</p>
+            <div class="proj-meta">
+              <span class="proj-stack">TypeScript · React 19 · Express 5 · MongoDB</span>
+              <button class="proj-cta" data-proj="ravenmernts">View details →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card" data-cat="demo">
           <div class="proj-media"><span class="hz hz-research">WEBSITE SAMPLE</span><span class="icon">🅰️</span></div>
           <div class="proj-body">
             <h3>Apex</h3>
@@ -831,6 +843,22 @@
         { label: 'Visit GitHub', url: 'https://github.com/leonlau4148/raven-mern', icon: '💻' }
       ],
       about: 'JWT authentication with bcrypt-hashed passwords, ownership-scoped CRUD where every query filters by the authenticated user\'s ID, and a running-balance dashboard derived from transaction state. Auth lives in a React Context provider with guarded routes and a configured axios instance for token injection; sessions persist via localStorage. Security details: userId always comes from the verified token (never the request body), update/delete queries filter on both _id and userId, and login returns identical errors to avoid account enumeration.'
+    },
+    ravenmernts: {
+      tag: 'Full-Stack Sample',
+      platform: 'web',
+      title: 'Raven Finance (MERN + TypeScript)',
+      desc: 'A fully typed rewrite of my MERN finance tracker — React 19, Express 5, and Tailwind CSS v4, with type safety carried end to end from the database schema to the UI.',
+      role: 'Developer',
+      roleText: 'Built independently as a follow-up to the JavaScript MERN build, this time porting the entire stack to TypeScript. The goal was to eliminate the class of bugs the first version could only catch at runtime — mismatched API payloads, renamed fields, and undefined access — by making the compiler enforce the contract between database, API, and client.',
+      stack: ['TypeScript','React 19','Vite','Tailwind CSS v4','Express 5','MongoDB Atlas','Mongoose','Node.js','JWT','bcrypt','axios','GitHub Pages','Render'],
+      img: 'financemern.png',
+      links: [
+        { label: 'Live App', url: 'https://leonlau4148.github.io/raven-mern-ts/', icon: '🔗' },
+        { label: 'API Health', url: 'https://raven-mern-ts.onrender.com/api/health', icon: '⚡' },
+        { label: 'Visit GitHub', url: 'https://github.com/leonlau4148/raven-mern-ts', icon: '💻' }
+      ],
+      about: 'A monorepo with a typed client and server. Model types are derived from the Mongoose schemas with InferSchemaType, so the database shape and the TypeScript types cannot drift apart — rename a field in the schema and every consumer fails to compile. Both packages run typecheck scripts as part of the build. The backend is Express 5 in TypeScript ESM, keeping the security model of the original: JWT bearer auth over bcrypt-hashed passwords, and a server that refuses to start at all if MONGO_URI or JWT_SECRET is missing, rather than failing later on first request. On the front end, Tailwind CSS v4 is configured CSS-first — the theme lives in an @theme block instead of a JS config file — and routing uses HashRouter, since GitHub Pages cannot rewrite unmatched paths back to index.html. Note that the API runs on Render\'s free tier, so the first sign-in after an idle period takes 30–50 seconds while the service wakes.'
     },
     apex: {
       tag: 'Website Sample',
