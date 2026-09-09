@@ -616,7 +616,7 @@
         <div class="skill-card">
           <h4>Data & Cloud</h4>
           <div class="chip-row">
-            <span class="chip">MSSQL</span><span class="chip">MongoDB</span><span class="chip">Mongoose</span><span class="chip">Firebase</span><span class="chip">Supabase</span><span class="chip">Azure</span><span class="chip">Render</span>
+            <span class="chip">MSSQL</span><span class="chip">MongoDB</span><span class="chip">Mongoose</span><span class="chip">Firebase</span><span class="chip">Supabase</span><span class="chip">Azure</span><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">Render</span>
           </div>
         </div>
         <div class="skill-card">
@@ -628,7 +628,7 @@
         <div class="skill-card">
           <h4>Tools</h4>
           <div class="chip-row">
-            <span class="chip">Git / GitHub</span><span class="chip">GitHub Actions</span><span class="chip">REST APIs</span><span class="chip">JWT</span><span class="chip">Postman</span><span class="chip">Jira</span><span class="chip">Figma</span>
+            <span class="chip">Git / GitHub</span><span class="chip">GitHub Actions</span><span class="chip">CI/CD</span><span class="chip">Docker</span><span class="chip">REST APIs</span><span class="chip">JWT</span><span class="chip">Postman</span><span class="chip">Jira</span><span class="chip">Figma</span>
           </div>
         </div>
         <div class="skill-card">
@@ -749,7 +749,7 @@
     biondmgmt: {
       tag: 'Web Application',
       platform: 'web',
-      websiteUrl: 'https://biondsolutions.com/',
+     // websiteUrl: 'https://biondsolutions.com/',
       title: 'Biond EOC Management',
       desc: 'The admin back-office for the BiondEOC platform — where response teams manage incidents, users, and reports.',
       role: 'Full-Stack Developer',
@@ -761,7 +761,7 @@
     lanaomgmt: {
       tag: 'Web Application',
       platform: 'web',
-      websiteUrl: 'https://lanao.biondsolutions.com/',
+     // websiteUrl: 'https://lanao.biondsolutions.com/',
       title: 'Lanao EOC Management',
       desc: 'Management portal for the Lanao del Sur EOC deployment.',
       role: 'Full-Stack Developer',
@@ -773,7 +773,7 @@
     tungawanmgmt: {
       tag: 'Web Application',
       platform: 'web',
-      websiteUrl: 'https://eoctungawan.ph/',
+      //websiteUrl: 'https://eoctungawan.ph/',
       title: 'Tungawan EOC Management',
       desc: 'Management portal for the Tungawan, Zamboanga Sibugay EOC deployment.',
       role: 'Full-Stack Developer',
@@ -942,7 +942,7 @@
               : (p.platform === 'web'
                   ? (p.websiteUrl
                       ? `<a href="${p.websiteUrl}" target="_blank" rel="noopener" class="store-badge" style="text-decoration:none;">🔗 Visit Website</a>`
-                      : `<span class="store-badge">🔗 Visit Website</span>`)
+                      : '')
                   : `${p.iosUrl
                       ? `<a href="${p.iosUrl}" target="_blank" rel="noopener" class="store-badge" style="text-decoration:none;">🍎 App Store</a>`
                       : `<span class="store-badge">🍎 App Store</span>`}
