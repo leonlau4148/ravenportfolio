@@ -102,24 +102,24 @@
   .social a{width:38px; height:38px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:14px;}
   .social a:hover{border-color:var(--accent); color:var(--accent);}
 
-  /* legend / stats strip */
-  .legend-strip{
-    margin-top:70px; border:1px solid var(--line); border-radius:6px; background:var(--panel);
-    display:grid; grid-template-columns:repeat(4,1fr);
-  }
-  .legend-item{padding:22px 24px; border-right:1px solid var(--line);}
-  .legend-item:last-child{border-right:none;}
-  .legend-item .num{font-family:var(--display); font-size:30px; color:var(--text); display:flex; align-items:baseline; gap:4px;}
-  .legend-item .num small{font-size:15px; color:var(--muted); font-family:var(--body);}
-  .legend-item .lbl{font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-top:6px;}
-  .level-dot{display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:6px;}
+/* legend / stats strip */
+.legend-strip{
+  margin-top:70px; border:1px solid var(--line); border-radius:6px; background:var(--panel);
+  display:grid; grid-template-columns:repeat(5,1fr);
+}
+.legend-item{padding:22px 24px; border-right:1px solid var(--line);}
+.legend-item:last-child{border-right:none;}
+.legend-item .num{font-family:var(--display); font-size:30px; color:var(--text); display:flex; align-items:baseline; gap:4px;}
+.legend-item .num small{font-size:15px; color:var(--muted); font-family:var(--body);}
+.legend-item .lbl{font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-top:6px;}
+.level-dot{display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:6px;}
 
-  /* SERVICES */
-  .services-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden;}
-  .service-card{background:var(--panel); padding:32px 26px;}
-  .service-card .tag{font-family:var(--mono); font-size:11px; color:var(--accent); letter-spacing:.08em; text-transform:uppercase;}
-  .service-card h3{font-size:19px; margin:14px 0 10px;}
-  .service-card p{color:var(--muted); font-size:14px;}
+/* SERVICES */
+.services-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+.service-card{background:var(--panel); padding:32px 26px;}
+.service-card .tag{font-family:var(--mono); font-size:11px; color:var(--accent); letter-spacing:.08em; text-transform:uppercase;}
+.service-card h3{font-size:19px; margin:20px 0 10px;}
+.service-card p{color:var(--muted); font-size:14px;}
 
   /* PROJECTS */
   .filter-row{display:flex; gap:10px; margin-bottom:36px; flex-wrap:wrap;}
@@ -267,8 +267,8 @@
           <div class="coord">TAGUM CITY, DAVAO DEL NORTE, PH · N 07.4478° E 125.8078° · STATUS: AVAILABLE</div>
           <div class="hero-name">I'm <strong>Raven Paul Adrales</strong></div>
           <div class="eyebrow">Software Engineer & Developer</div>
-          <h1>I build cross-platform apps<br>and <span>full-stack systems</span><br>that hold up under pressure.</h1>
-          <p class="lead">Full-stack engineer working across Flutter, C# / .NET Core, and web — one owner from the mobile screen down to the API and database. Recent work centers on emergency-operations platforms — real-time hazard mapping, incident dashboards, and the backend infrastructure behind them.</p>
+        <h1>I build cross-platform apps<br>and <span>full-stack systems</span><br>that hold up under pressure.</h1>
+        <p class="lead">Full-stack engineer working across Flutter, React/TypeScript, Node.js, and C# / .NET Core — one owner from the mobile screen down to the API and database, building real-time platforms end to end.</p>
           <div class="hero-actions">
             <a href="mailto:ravenpauladrales@gmail.com" class="btn-primary">Get in touch →</a>
             <div class="social">
@@ -288,11 +288,15 @@
       <div class="legend-strip">
         <div class="legend-item">
           <div class="num">1<small>+ yr</small></div>
-          <div class="lbl"><span class="level-dot" style="background:var(--accent-2)"></span>Flutter — Web / iOS / Android</div>
+          <div class="lbl"><span class="level-dot" style="background:var(--accent-2)"></span>Flutter · React — Web / iOS / Android</div>
         </div>
         <div class="legend-item">
           <div class="num">1<small>+ yr</small></div>
-          <div class="lbl"><span class="level-dot" style="background:var(--accent)"></span>C# · ASP.NET Core</div>
+          <div class="lbl"><span class="level-dot" style="background:var(--accent)"></span>C# · ASP.NET Core · Node.js · Typescript/Javascript</div>
+        </div>
+        <div class="legend-item">
+          <div class="num">1<small>+ yr</small></div>
+          <div class="lbl"><span class="level-dot" style="background:var(--accent)"></span>AI coding assistants - Claude Code, Github Copilot</div>
         </div>
         <div class="legend-item">
           <div class="num">7<small>+</small></div>
@@ -306,38 +310,43 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">What I do</div>
-        <h2>Full-stack, end to end</h2>
-        <p class="section-sub">From a single Flutter screen to the API and database underneath it — one owner across the whole stack.</p>
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What I do</div>
+      <h2>Full-stack, end to end</h2>
+      <p class="section-sub">From front-end interfaces to the APIs and databases underneath them — one owner across the whole stack.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="tag">Web</div>
+        <h3>React, HTML, CSS, Tailwind</h3>
+        <p>Responsive, high-performance web applications built with React, styled with Tailwind CSS — from marketing sites to full-featured web apps.</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="tag">Mobile</div>
-          <h3>Flutter Apps</h3>
-          <p>Cross-platform apps for Web, iOS, and Android from one codebase, using Cubit/Bloc state management.</p>
-        </div>
-        <div class="service-card">
-          <div class="tag">Backend</div>
-          <h3>.NET Core APIs</h3>
-          <p>RESTful APIs in C# / ASP.NET Core with EF Code-First and MSSQL, built with Clean Architecture and MVC.</p>
-        </div>
-        <div class="service-card">
-          <div class="tag">Systems</div>
-          <h3>Real-time Integrations</h3>
-          <p>Agora video, Twilio SMS/voice, Mapbox and Google Maps — wired into production auth flows and data sync.</p>
-        </div>
-        <div class="service-card">
-          <div class="tag">Hardware</div>
-          <h3>IoT & Embedded</h3>
-          <p>ESP32-C6 firmware and sensor integration, connected back to mobile apps via Firebase Realtime DB or REST.</p>
-        </div>
+      <div class="service-card">
+        <div class="tag">Mobile</div>
+        <h3>Flutter Apps</h3>
+        <p>Cross-platform apps for Web, iOS, and Android from one codebase, using Cubit/Bloc state management.</p>
+      </div>
+      <div class="service-card">
+        <div class="tag">Backend</div>
+        <h3>.NET Core & Node.js APIs</h3>
+        <p>RESTful APIs in C# / ASP.NET Core with EF Code-First and MSSQL, plus Node.js/TypeScript services with MongoDB — built with Clean Architecture and MVC.</p>
+      </div>
+      <div class="service-card">
+        <div class="tag">Systems</div>
+        <h3>Real-time Integrations</h3>
+        <p>Agora video, Twilio SMS/voice, Mapbox and Google Maps — wired into production auth flows and data sync.</p>
+      </div>
+      <div class="service-card">
+        <div class="tag">Hardware</div>
+        <h3>IoT & Embedded</h3>
+        <p>ESP32-C6 firmware and sensor integration, connected back to mobile apps via Firebase Realtime DB or REST.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- PROJECTS -->
   <section id="work">
